@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrogPay.CRUD.API", "FrogPay.CRUD.API\FrogPay.CRUD.API.csproj", "{0EB4D517-0BD8-4C42-9752-B4C34EABE5B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrogPay.CRUD.Domain", "FrogPay.CRUD.Domain\FrogPay.CRUD.Domain.csproj", "{739718FD-EC1E-426C-8BC6-9C3FD5DAE66D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrogPay.CRUD.Infrastructure", "FrogPay.CRUD.Infrastructure\FrogPay.CRUD.Infrastructure.csproj", "{7ED24F9B-089B-4E58-9E23-EE3836D35748}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EB4D517-0BD8-4C42-9752-B4C34EABE5B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EB4D517-0BD8-4C42-9752-B4C34EABE5B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EB4D517-0BD8-4C42-9752-B4C34EABE5B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EB4D517-0BD8-4C42-9752-B4C34EABE5B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{739718FD-EC1E-426C-8BC6-9C3FD5DAE66D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{739718FD-EC1E-426C-8BC6-9C3FD5DAE66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{739718FD-EC1E-426C-8BC6-9C3FD5DAE66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{739718FD-EC1E-426C-8BC6-9C3FD5DAE66D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ED24F9B-089B-4E58-9E23-EE3836D35748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED24F9B-089B-4E58-9E23-EE3836D35748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED24F9B-089B-4E58-9E23-EE3836D35748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED24F9B-089B-4E58-9E23-EE3836D35748}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
