@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  database: 
+    image: postgres:16.2
+    environment:
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=postgres"
+      - "POSTGRES_DB=dbFrogpay"
+    ports:
+      - 5432:5432
+    volumes:
+      - mq-data:/var/lib/postgresql/data
+volumes:
+  mq-data:
+networks:
+  frogpaychallenge:
+    driver: bridge
