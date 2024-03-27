@@ -1,18 +1,40 @@
 version: '3.4'
 
-services:
-  database: 
-    image: postgres:16.2
-    environment:
-      - "POSTGRES_USER=postgres"
-      - "POSTGRES_PASSWORD=postgres"
-      - "POSTGRES_DB=dbFrogpay"
-    ports:
-      - 5432:5432
-    volumes:
-      - mq-data:/var/lib/postgresql/data
-volumes:
-  mq-data:
 networks:
   frogpaychallenge:
     driver: bridge
+
+services:
+  frogpay-app:
+    image: docker.io/library/frogpaychallenge
+    depends_on:
+      - "app_db"
+    container_name: frogpaychallenge
+    ports:
+      - "8080:80"
+    build:
+      context: .
+      dockerfile: dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnection=User ID=postgres;Password=postgres;Server=app_db;Port=5432;Database=dbFrogpay; IntegratedSecurity=True;Pooling=true;
+      - ASPNETCORE_URLS=http://+:80
+    networks:
+      - frogpaychallenge
+
+  app_db: 
+    image: postgres:latest
+    container_name: app_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=dbFrogpay
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - mq-data:/var/lib/postgresql/data
+    networks:
+      - frogpaychallenge
+
+volumes:
+  mq-data:

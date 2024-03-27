@@ -15,4 +15,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FrogPay.CRUD.Domain\FrogPay.CRUD.Domain.csproj" />
+    <ProjectReference Include="..\FrogPay.CRUD.Infrastructure\FrogPay.CRUD.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
